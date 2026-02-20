@@ -2,12 +2,9 @@ package com.ty.voyogo.controller;
 
 import com.ty.voyogo.dto.request.BusRequestDTO;
 import com.ty.voyogo.dto.response.BookingResponseDTO;
-import com.ty.voyogo.dto.response.TripResponseDTO;
-import com.ty.voyogo.entity.Bus;
 import com.ty.voyogo.entity.util.BusType;
 import com.ty.voyogo.service.BookingService;
 import com.ty.voyogo.service.BusService;
-import com.ty.voyogo.service.TripService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -89,7 +89,7 @@ public class SecurityConfig {
                         .stream()
                         .map(String::trim)
                         .filter(origin -> !origin.isEmpty())
-                        .collect(Collectors.toList())
+                        .toList()
         );
         configuration.setAllowedMethods(List.of(
                 "GET", "POST", "PUT", "DELETE", "OPTIONS"

@@ -1,7 +1,5 @@
 package com.ty.voyogo.service;
 
-import com.ty.voyogo.repository.SeatLockRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -189,7 +189,7 @@ public class BookingServiceImpl implements BookingService {
         User user=(User) appUserDetailsService.loadUserByUsername(name);
 
         return user.getBookings().stream()
-                .map(booking -> new BookingResponseDTO(booking)).toList();
+                .map(BookingResponseDTO::new).toList();
     }
 
     @Override
@@ -203,7 +203,7 @@ public class BookingServiceImpl implements BookingService {
                                 new ResourceNotFoundException("Booking not found")
                         );
 
-        if (!(booking.getUser().getUserId()==user.getUserId())) {
+        if ((booking.getUser().getUserId()!=user.getUserId())) {
 
             throw new UnauthorizedActionException(
                     "Unauthorized cancel attempt"
@@ -250,7 +250,7 @@ public class BookingServiceImpl implements BookingService {
     @Override
     public List<BookingResponseDTO> findAllBookings() {
         return bookingRepository.findAll().stream()
-                .map(booking -> new BookingResponseDTO(booking))
+                .map(BookingResponseDTO::new)
                 .toList();
     }
 
@@ -258,6 +258,6 @@ public class BookingServiceImpl implements BookingService {
     public List<BookingResponseDTO> findBookingsDate(LocalDate date) {
         return bookingRepository.findByTrip_TravelDate(date)
                 .stream()
-                .map(booking -> new BookingResponseDTO(booking)).toList();
+                .map(BookingResponseDTO::new).toList();
     }
 }

@@ -68,7 +68,7 @@ public class RouteServiceImpl implements RouteService {
     @Override
     public List<RouteResponse> getAllRoutes() {
         return routeRepository.findAll()
-                .stream().map(route-> new RouteResponse(route))
+                .stream().map(RouteResponse::new)
                 .toList();
     }
 

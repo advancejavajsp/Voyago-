@@ -3,9 +3,7 @@ package com.ty.voyogo.service;
 import com.ty.voyogo.dto.request.RouteRequest;
 import com.ty.voyogo.dto.response.RouteResponse;
 import com.ty.voyogo.dto.response.SeatResponseDTO;
-import org.jspecify.annotations.Nullable;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 

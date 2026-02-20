@@ -1,6 +1,5 @@
 package com.ty.voyogo.security;
 
-import com.ty.voyogo.entity.User;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -86,10 +85,7 @@ public class JwtFilter extends OncePerRequestFilter {
                         .getContext()
                         .setAuthentication(authToken);
 
-                // Debug log
-                System.out.println(
-                        "Authenticated user: " + username
-                );
+
 
             }
         }

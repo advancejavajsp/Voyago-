@@ -1,12 +1,10 @@
 package com.ty.voyogo.repository;
 
-import com.ty.voyogo.entity.Booking;
 import com.ty.voyogo.entity.Bus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Repository

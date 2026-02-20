@@ -1,6 +1,5 @@
 package com.ty.voyogo.repository;
 
-import com.ty.voyogo.dto.response.BookingResponseDTO;
 import com.ty.voyogo.entity.Booking;
 import com.ty.voyogo.entity.util.Status;
 import org.springframework.data.jpa.repository.JpaRepository;

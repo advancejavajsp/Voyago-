@@ -1,7 +1,6 @@
 package com.ty.voyogo.repository;
 
 import com.ty.voyogo.entity.Route;
-import org.hibernate.boot.models.JpaAnnotations;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,7 +1,6 @@
 package com.ty.voyogo.entity;
 
 import com.ty.voyogo.entity.util.PaymentStatus;
-import com.ty.voyogo.entity.util.Status;
 import jakarta.persistence.*;
 import lombok.*;
 

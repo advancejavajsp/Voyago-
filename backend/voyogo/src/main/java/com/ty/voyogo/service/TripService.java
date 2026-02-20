@@ -2,7 +2,6 @@ package com.ty.voyogo.service;
 
 import com.ty.voyogo.dto.request.TripRequestDTO;
 import com.ty.voyogo.dto.response.TripResponseDTO;
-import org.jspecify.annotations.Nullable;
 
 import java.time.LocalDate;
 import java.util.List;

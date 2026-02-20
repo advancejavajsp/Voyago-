@@ -18,7 +18,7 @@ public class RefundScheduler {
     private final PaymentRepository paymentRepository;
 
 
-    @Scheduled(fixedRate = 60000) // every 1 minute
+    @Scheduled(fixedRate = 600000) // every 10 minute
     @Transactional
     public void processRefunds() {
 

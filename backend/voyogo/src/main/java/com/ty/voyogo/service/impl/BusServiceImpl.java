@@ -50,7 +50,7 @@ public class BusServiceImpl implements BusService {
     @Override
     public List<BusRequestDTO> getAllBuses() {
         return busRepository.findByActive().stream()
-                .map(bus -> new BusRequestDTO(bus)).toList();
+                .map(BusRequestDTO::new).toList();
     }
 
     @Transactional

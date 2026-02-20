@@ -2,7 +2,6 @@ package com.ty.voyogo.controller;
 
 import com.ty.voyogo.dto.response.AnalyticsResponseDTO;
 import com.ty.voyogo.service.impl.AnalyticsService;
-import com.ty.voyogo.service.impl.AnalyticsService;
 
 import lombok.RequiredArgsConstructor;
 

@@ -1,13 +1,11 @@
 package com.ty.voyogo.repository;
 
-import com.ty.voyogo.dto.response.TripResponseDTO;
 import com.ty.voyogo.entity.Trip;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
-import java.util.Arrays;
 import java.util.List;
 
 @Repository

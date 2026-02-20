@@ -16,12 +16,12 @@ import java.util.*;
 public class JwtService {
 
     @Value(value = "${jwt.secret}")
-    private  String jwt_secret ;
+    private  String jwtSecret ;
     @Value(value = "${jwt.expiry_time}")
     private Long expriy;
 
     private SecretKey signingKey() {
-        return Keys.hmacShaKeyFor( Base64.getDecoder().decode(jwt_secret));
+        return Keys.hmacShaKeyFor( Base64.getDecoder().decode(jwtSecret));
     }
 
     public String generateToken(User user){

@@ -1,9 +1,7 @@
 package com.ty.voyogo.dto.response;
 
 import com.ty.voyogo.entity.Booking;
-import com.ty.voyogo.entity.BookingSeat;
-import com.ty.voyogo.entity.Passenger;
-import com.ty.voyogo.entity.Seat;
+
 import com.ty.voyogo.entity.util.Status;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -40,7 +38,6 @@ public class BookingResponseDTO {
 
     private LocalDateTime departureTime;
 
-//    private List<BookingSeatResponse> seatNumbers;
 
 
     public BookingResponseDTO(Booking booking){
@@ -56,6 +53,5 @@ public class BookingResponseDTO {
 
         this.departureTime=LocalDateTime.of(booking.getTrip().getTravelDate(),booking.getTrip().getDepartureTime());
 
-//        this.seatNumbers=booking.getBookingSeats().stream().map(bookingSeat -> new BookingSeatResponse(bookingSeat)).toList();
     }
 }

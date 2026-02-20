@@ -9,16 +9,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
+
 @Repository
 public interface BookingSeatRepository extends JpaRepository<BookingSeat,Long> {
 
-//    @Query("""
-//SELECT bs.seat.seatId
-//FROM BookingSeat bs
-//WHERE bs.booking.trip.tripId = :tripId
-//AND bs.booking.status = 'Status.CONFIRMED'
-//""")
-//    List<Long> findBookedSeats(Long tripId);
+    @Query("""
+SELECT bs.seat.seatId
+FROM BookingSeat bs
+WHERE bs.booking.trip.tripId = :tripId
+AND bs.booking.status = :status
+""")
+    List<Long> findBookedSeats(Long tripId,Status status);
 
     @Query("""
         SELECT COUNT(bs)

@@ -1,6 +1,5 @@
 package com.ty.voyogo.dto.response;
 
-import com.ty.voyogo.dto.request.PassengerRequestDTO;
 import com.ty.voyogo.entity.Passenger;
 import com.ty.voyogo.entity.util.Gender;
 import lombok.AllArgsConstructor;

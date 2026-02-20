@@ -16,7 +16,6 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.chrono.ChronoLocalDate;
 import java.util.List;
 
 @Service
@@ -64,12 +63,12 @@ public class TripServiceImpl implements TripService {
     @Override
     public List<TripResponseDTO> trips() {
         return tripRepository.findByActive().stream()
-                .map(trip-> new TripResponseDTO(trip)).toList();
+                .map(TripResponseDTO::new).toList();
     }
 
     @Override
     public List<TripResponseDTO> search(String from, String to, LocalDate travelDate) {
         return tripRepository.findByRouteSourceIgnoreCaseAndRouteDestinationIgnoreCaseAndTravelDate(from,to,travelDate).stream()
-                .map(trip-> new TripResponseDTO(trip)).toList();
+                .map(TripResponseDTO::new).toList();
     }
 }

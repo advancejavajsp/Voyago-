@@ -33,7 +33,7 @@ public class BusBookingController {
     private final PaymentRepository paymentRepository;
     private final BookingRepository bookingRepository;
     @GetMapping("/search")
-    private ResponseEntity<List<TripResponseDTO>> search(@RequestParam String from , @RequestParam String to,
+    public ResponseEntity<List<TripResponseDTO>> search(@RequestParam String from , @RequestParam String to,
                                                         @RequestParam LocalDate date){
 
         return ResponseEntity.ok(tripService.search(from,to,date));
