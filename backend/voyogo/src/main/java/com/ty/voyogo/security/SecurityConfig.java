@@ -42,6 +42,11 @@ public class SecurityConfig {
                         .csrf(csrf->csrf.disable())
                         .authorizeHttpRequests(auth-> auth
                                 .requestMatchers("/voyago/auth/**").permitAll()
+                                .requestMatchers(
+                                        "/swagger-ui/**",
+
+                                        "/v3/api-docs/**"
+                                ).permitAll()
                                 .requestMatchers("/voyago/admin/**").hasRole("ADMIN")
                                 .anyRequest().authenticated())
                         .sessionManagement(session->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
